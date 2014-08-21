@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 from collections import deque
-d = deque(chr(x) for x in range(ord(' '), ord('~')+1))
+
+ascii_min = ord(' ')
+ascii_max = ord('~')
+
+d = deque(chr(x) for x in range(ascii_min, ascii_max + 1))
+
 print(''.join(d))
 for i in range(len(d)-1):
     d.rotate(-1)
